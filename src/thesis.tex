@@ -43,13 +43,12 @@
 
 %=== Preliminary Pages ============================================
 \begin{frontmatter}
-	\input{src/preliminary/title}
+	\input{preliminary/title}
 	\maketitle
 	\approvalpage
 	\copyrightpage
-	\input{src/preliminary/acknowledgements}
-	\input{src/preliminary/vitae}
-	\input{src/preliminary/abstract}
+	\input{preliminary/vitae}
+	\input{preliminary/abstract}
 	\tableofcontents
 \end{frontmatter}
 
@@ -83,64 +82,24 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}}
 
-%=== Introduction ============================================
-\chapter{Introduction}
+%=== Chapters ============================================
 
-Words
+\include{chapters/1_introduction}
+\include{chapters/2_open_source_tools}
+\include{chapters/3_digital_design}
+\include{chapters/4_resources}
+\include{chapters/5_scalability}
+\include{chapters/6_autograders}
+\include{chapters/7_labs_with_cva6}
+\include{chapters/8_conclusion}
 
-Words2
+%=== Final ============================================
 
-\begin{section}{Permissions and Attributions}
-\begin{enumerate}
+\include{final/appendix}
+\include{final/glossary}
 
-\item The content of chapter 2 and appendix A is the result of a collaboration with Alice and Bob, and has previously appeared in the (Journal) (paper citation). It is reproduced here with the permission of (Institution): \url{http://}.
-
-\end{enumerate}
-\end{section}
-
-%=== Chapter 2  ============================================
-\chapter{Chapter 2 Title}
-%---  Section -------------------------
-\begin{section}{Section Title}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et neque massa. Fusce sit amet orci libero. Morbi venenatis quam ante, in vehicula diam. Cras in dui sem, et fermentum ligula. Sed sed tellus ut purus semper pharetra euismod nec tellus. Nullam tortor justo, tincidunt sed varius vel, rhoncus id ipsum. Sed ipsum sem, bibendum id posuere sit amet, dignissim vel odio. Integer pretium mattis metus eu porta. Sed luctus, eros eu feugiat euismod, nulla augue fringilla nisi, sed gravida sem orci ac urna.
-
-\end{section}
-
-%=== Chapter 3  ============================================
-\chapter{Chapter 3 Title}
-%---  Introduction -------------------------
-\begin{section}{Section Title}
-
-\cite{Maldacena:1997re,joesbook}. Figure \ref{fig:label}.
-
-\begin{figure}[t]
-\centerline{\includegraphics[width=.35\textwidth]{fig/testfig1.pdf}
-\hspace{1cm}\includegraphics[width=.45\textwidth]{fig/testfig2.pdf}}
-\caption{Figure Captions.}
-\label{fig:label}
-\end{figure}
-
-\end{section}
-
-
-
-%=== Appendix ============================================
-\appendix
-
-\dsp
-
-\chapter{Appendix Title }{\label{appendix:a}}
-\begin{section}{Section Title}
-
-Appendicitis
-
-\end{section}
 \end{mainmatter}
 
-%----- Bibliography ----------------
-\ssp
-\bibliographystyle{JHEP3}
-\bibliography{thesis}
+\include{final/references}
 
 \end{document}

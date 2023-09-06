@@ -4,9 +4,11 @@ BIBTEX := BSTINPUTS=../dependencies/ucsb: BIBINPUTS=../src: bibtex
 
 JUNK := *.pdf *.aux *.log *.bbl *.blg *.toc *.out *.fdb_latexmk *.fls *.synctex.gz
 
-all: clean thesis
+all: thesis
 
 thesis:
+	mkdir -p final
+	mkdir -p chapters
 	$(PDFLATEX) thesis
 	$(BIBTEX) thesis
 	$(PDFLATEX) thesis

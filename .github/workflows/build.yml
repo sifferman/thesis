@@ -13,17 +13,9 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-    # - name: Install TeX Live
-    #   run: |
-    #     sudo apt install -y texlive texlive-full
-    # - name: Build
-    #   run: |
-    #     cd build && make
-    - name: Create Tag
+    - name: Install TeX Live
       run: |
-        git tag -a $(date '+%Y%m%d%H%M%S') -m "Tagging the commit"
-        git push --tags
-    - name: Create release
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: "build/Makefile"
+        sudo apt install -y texlive texlive-full
+    - name: Build
+      run: |
+        cd build && make
