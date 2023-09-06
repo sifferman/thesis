@@ -18,4 +18,4 @@ jobs:
         sudo apt install -y texlive texlive-full
     - name: Build
       run: |
-        cd build && make
+        make
