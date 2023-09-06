@@ -1,0 +1,8 @@
+{
+    // Auto Formatting
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    // Live Server
+    "liveServer.settings.root": "docs/",
+}
