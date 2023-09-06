@@ -1,0 +1,29 @@
+name: Build Thesis
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    # - name: Install TeX Live
+    #   run: |
+    #     sudo apt install -y texlive texlive-full
+    # - name: Build
+    #   run: |
+    #     cd build && make
+    - name: Create Tag
+      run: |
+        git tag -a $(date '+%Y%m%d%H%M%S') -m "Tagging the commit"
+        git push --tags
+    - name: Create release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "build/Makefile"

@@ -1,0 +1,148 @@
+%%%---PREAMBLE---%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[oneside,12pt,final]{sty/ucthesis-CA2012}
+\pdfoutput=1
+
+%--- Packages ---------------------------------------------------------
+\usepackage[lofdepth,lotdepth,caption=false]{subfig}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb, graphicx}
+\usepackage{xspace}
+\usepackage{braket}
+\usepackage{color}
+\usepackage{setspace}
+%\usepackage{subfigure} (Subfigure package clashes with another package)
+
+%---New Definitions and Commands------------------------------------------------------
+\def\p{\partial}
+\def\im{\mrm{im}}
+\def\Tr{\mrm{Tr}}
+\def\Z{\mbb{Z}}
+\def\R{\mbb{R}}
+\def\C{\mbb{C}}
+\def\half{\frac{1}{2}}
+\def\filler{\phantom{fillerfillerfiller}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\mrm}[1]{\mathrm{#1}}
+\newcommand{\mcal}[1]{\mathcal{#1}}
+\newcommand{\mbf}[1]{\mathbf{#1}}
+\newcommand{\ph}[1]{\phantom{#1}}
+\newcommand{\udten}[3]{#1^{#2}_{\ph{#2}#3}}
+\newcommand{\duten}[3]{#1^{\ph{#2}#3}_{#2}}
+\newcommand{\pd}[2]{\frac{\p#1}{\p#2}}
+\newcommand{\D}[2]{\frac{d#1}{d#2}}
+
+%---Set Margins ------------------------------------------------------
+\setlength\oddsidemargin{0.25 in} \setlength\evensidemargin{0.25 in} \setlength\textwidth{6.25 in} \setlength\textheight{8.50 in}
+\setlength\footskip{0.25 in} \setlength\topmargin{0 in} \setlength\headheight{0.25 in} \setlength\headsep{0.25 in}
+
+%%%---DOCUMENT---%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%=== Preliminary Pages ============================================
+\begin{frontmatter}
+	\input{tex/title}
+	\maketitle
+	\approvalpage
+	\copyrightpage
+	\input{tex/dedicate}%comment out if you don't want a dedication
+	\input{tex/acknowledgements}
+	\input{tex/vitae}
+	\input{tex/abstract}
+	\tableofcontents
+\end{frontmatter}
+
+\begin{mainmatter}
+
+%---Set Headers and Footers ------------------------------------------------------
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{{\sf #1 \hspace*{\fill} Chapter~\thechapter}}{} }
+\renewcommand{\sectionmark}[1]{\markright{ {\sf Section~\thesection \hspace*{\fill} #1 }}}
+\fancyhf{}
+
+\makeatletter \if@twoside \fancyhead[LO]{\small \rightmark} \fancyhead[RE]{\small\leftmark} \else \fancyhead[LO]{\small\leftmark}
+\fancyhead[RE]{\small\rightmark} \fi
+
+\def\cleardoublepage{\clearpage\if@openright \ifodd\c@page\else
+  \hbox{}
+  \vspace*{\fill}
+  \begin{center}
+    This page intentionally left blank
+  \end{center}
+  \vspace{\fill}
+  \thispagestyle{plain}
+  \newpage
+  \fi \fi}
+\makeatother
+\fancyfoot[c]{\textrm{\textup{\thepage}}} % page number
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{plain} { \fancyhf{} \fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+%=== Introduction ============================================
+\chapter{Introduction}
+
+Cum Veteres Mechanicam (uti Author est Pappus) in verum Naturalium investigatione maximi fecerint, \& recentiores, missis formis substantialibus \& qualitatibus occultis, Ph¾nomena Natur¾ ad leges Mathematicas revocare aggressi sint: Visum est in hoc Tractatu Mathesin excolere quatenus ea ad Philosophiam spectat. Mechanicam vero duplicem Veteres constituerunt: Rationalem qu¾ per Demonstrationes accurate procedit, \& Practicam. Ad practicam spectant Artes omnes Manuales, a quibus utiq; Mechanica nomen mutuata est. Cum autem Artifices parum accurate operari soleant, fit ut Mechanica omnis a Geometria ita distinguatur, ut quicquid accuratum sit ad Geometriam referatur, quicquid minus accuratum ad Mechanicam. Attamen errores non sunt Artis sed Artificum. Qui minus accurate operatur, imperfectior est Mechanicus, \& si quis accuratissime operari posset, hic foret Mechanicus omnium perfectissimus. Nam \& Linearum rectarum \& Circulorum descriptiones in quibus Geometria fundatur, ad Mechanicam pertinent. Has lineas describere Geometria non docet sed postulat. Postulat enim ut Tyro easdem accurate describere prius didicerit quam limen attingat Geometri¾; dein, quomodo per has operationes Problemata solvantur, docet. Rectas \& circulos describere Problemata sunt sed non Geometrica. Ex Mechanica postulatur horum solutio, in Geometria docetur solutorum usus. Ac gloriatur Geometria quod tam paucis principiis aliunde petitis tam multa pr¾stet. Fundatur igitur Geometria in praxi Mechanica, \& nihil aliud est quam Mechanic¾ universalis pars illa qu¾ artem mensurandi accurate proponit ac demonstrat. Cum autem artes Manuales in corporibus movendis pr¾cipue versentur, fit ut Geometria ad magnitudinem, Mechanica ad motum vulgo reseratur. Quo sensu Mechanica rationalis erit Scientia Motuum qui ex viribus quibuscunq; resultant, \& virium qu¾ ad motus quoscunq; requiruntur, accurate proposita ac demonstrata. Pars h¾c Mechanic¾ a Veteribus in Potentiis quinque ad artes manuales spectantibus exculta fuit, qui Gravitatem (cum potentia manualis non sit) vix aliter quam in ponderibus per potentias illas movendis considerarunt. Nos autem non Artibus sed Philosophi¾ consulentes, deq; potentiis non manualibus sed naturalibus scribentes, ea maxime tractamus qu¾ ad Gravitatem, levitatem, vim Elasticam, resistentiam Fluidorum \& ejusmodi vires seu attractivas seu impulsivas spectant: Et ea propter h¾c nostra tanquam Philosophi¾ principia Mathematica proponimus. Omnis enim Philosophi¾ difficultas in eo versari videtur, ut a Ph¾nomenis motuum investigemus vires Natur¾, deinde ab his viribus demonstremus ph¾nomena reliqua. Et hac spectant Propositiones generales quas Libro primo \& secundo pertractavimus. In Libro autem tertio exemplum hujus rei proposuimus per explicationem Systematis mundani. Ibi enim, ex ph¾nomenis c¾lestibus, per Propositiones in Libris prioribus Mathematice demonstratas, derivantur vires gravitatis quibus corpora ad Solem \& Planetas singulos tendunt. Deinde ex his viribus per Propositiones etiam Mathematicas deducuntur motus Planetarum, Cometarum, Lun¾ \& Maris. Utinam c¾tera Natur¾ ph¾nomena ex principiis Mechanicis eodem argumentandi genere derivare liceret. Nam multa me movent ut nonnihil suspicer ea omnia ex viribus quibusdam pendere posse, quibus corporum particul¾ per causas nondum cognitas vel in se mutuo impelluntur \& secundum figuras regulares coh¾rent, vel ab invicem fugantur \& recedunt: quibus viribus ignotis, Philosophi hactenus Naturam frustra tentarunt. Spero autem quod vel huic Philosophandi modo, vel veriori alicui, Principia hic posita lucem aliquam pr¾bebunt.
+
+In his edendis, Vir acutissimus \& in omni literarum genere eruditissimus Edmundus Halleius operam navavit, nec solum Typothetarum Sphalmata correxit \& Schemata incidi curavit, sed etiam Author fuit ut horum editionem aggrederer. Quippe cum demonstratam a me figuram Orbium c¾lestium impetraverat, rogare non destitit ut eadem cum Societate Regali communicarem, Qu¾ deinde hortatibus \& benignis suis auspiciis effecit ut de eadem in lucem emittenda cogitare inciperem. At postquam Motuum Lunarium in¾qualitates aggressus essem, deinde etiam alia tentare c¾pissem qu¾ ad leges mensuras Gravitatis \& aliarum virium, ad figuras a corporibus secundum datas quascunque leges attractis describendas, ad motus corporum plurium inter se, ad motus corporum in Mediis resistentibus, ad vires, densitates \& motus Mediorum, ad Orbes Cometarum \& similia spectant, editionem in aliud tempus differendam esse putavi, ut c¾tera rimarer \& una in publicum darem. Qu¾ ad motus Lunares spectant, (imperfecta cum sint,) in Corollariis Propositionis LXVI. simul complexus sum, ne singula methodo prolixiore quam pro rei dignitate proponere, \& sigillatim demonstrare tenerer, \& seriem reliquarum Propositionum interrumpere. Nonnulla sero inventa locis minus idoneis inserere malui, quam numerum Propositionum \& citationes mutare. Ut omnia candide legantur, \& defectus, in materia tam difficili non tam reprehendantur, quam novis Lectorum conatibus investigentur, \& benigne suppleantur, enixe rogo.
+
+
+\begin{section}{Permissions and Attributions}
+\begin{enumerate}
+
+\item The content of chapter 2 and appendix A is the result of a collaboration with Alice and Bob, and has previously appeared in the (Journal) (paper citation). It is reproduced here with the permission of (Institution): \url{http://}.
+
+\end{enumerate}
+\end{section}
+
+%=== Chapter 2  ============================================
+\chapter{Chapter 2 Title}
+%---  Section -------------------------
+\begin{section}{Section Title}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et neque massa. Fusce sit amet orci libero. Morbi venenatis quam ante, in vehicula diam. Cras in dui sem, et fermentum ligula. Sed sed tellus ut purus semper pharetra euismod nec tellus. Nullam tortor justo, tincidunt sed varius vel, rhoncus id ipsum. Sed ipsum sem, bibendum id posuere sit amet, dignissim vel odio. Integer pretium mattis metus eu porta. Sed luctus, eros eu feugiat euismod, nulla augue fringilla nisi, sed gravida sem orci ac urna.
+
+\end{section}
+
+%=== Chapter 3  ============================================
+\chapter{Chapter 3 Title}
+%---  Introduction -------------------------
+\begin{section}{Section Title}
+
+\cite{Maldacena:1997re,joesbook}. Figure \ref{fig:label}.
+
+\begin{figure}[t]
+\centerline{\includegraphics[width=.35\textwidth]{fig/testfig1.pdf}
+\hspace{1cm}\includegraphics[width=.45\textwidth]{fig/testfig2.pdf}}
+\caption{Figure Captions.}
+\label{fig:label}
+\end{figure}
+
+\end{section}
+
+
+
+%=== Appendix ============================================
+\appendix
+
+\dsp
+
+\chapter{Appendix Title }{\label{appendix:a}}
+\begin{section}{Section Title}
+
+Appendicitis
+
+\end{section}
+\end{mainmatter}
+
+%----- Bibliography ----------------
+\ssp
+\bibliographystyle{JHEP3}
+\bibliography{dissertation}
+
+\end{document} 
