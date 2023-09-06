@@ -206,9 +206,12 @@
     \bigskip \medskip \vspace{6ex}
     \fmfont {\bfseries \Large {\@title} \par}   % Formatting of the Dissertation title
     \bigskip \medskip \vspace{6ex}
-    A thesis submitted in partial satisfaction of the \par
+    A dissertation submitted in partial satisfaction  \par
     \smallskip
-    requirements for the degree {\@degree} \par
+    of the requirements for the degree \par
+    \bigskip {\@degree} \par
+    \smallskip in \par
+    \smallskip {\@field} \par
     \bigskip \medskip by \par
     \bigskip \medskip {\@author} \par
   \end{center}
