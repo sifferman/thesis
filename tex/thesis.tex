@@ -11,6 +11,10 @@
 \usepackage{braket}
 \usepackage{color}
 \usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{soul}
+\usepackage[outputdir=build]{minted}
+\usepackage{siunitx}
 %\usepackage{subfigure} (Subfigure package clashes with another package)
 
 %---New Definitions and Commands------------------------------------------------------
@@ -34,9 +38,15 @@
 \newcommand{\pd}[2]{\frac{\p#1}{\p#2}}
 \newcommand{\D}[2]{\frac{d#1}{d#2}}
 
+\renewcommand{\chapterautorefname}{Chapter}
+
 %---Set Margins ------------------------------------------------------
 \setlength\oddsidemargin{0.25 in} \setlength\evensidemargin{0.25 in} \setlength\textwidth{6.25 in} \setlength\textheight{8.50 in}
 \setlength\footskip{0.25 in} \setlength\topmargin{0 in} \setlength\headheight{0.25 in} \setlength\headsep{0.25 in}
+
+%---Fonts ------------------------------------------------------
+\titleformat{\section}
+  {\normalfont\fontsize{12}{15}\bfseries}{\thesection}{1em}{}
 
 %%%---DOCUMENT---%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -47,7 +57,7 @@
 	\maketitle
 	\approvalpage
 	\copyrightpage
-	\input{preliminary/vitae}
+	% \input{preliminary/vitae}
 	\input{preliminary/abstract}
 	\tableofcontents
 \end{frontmatter}
@@ -91,12 +101,13 @@
 \include{chapters/5_scalability}
 \include{chapters/6_autograders}
 \include{chapters/7_labs_with_cva6}
-\include{chapters/8_conclusion}
+\include{chapters/8_other_classes}
+\include{chapters/9_conclusion}
 
 %=== Final ============================================
 
-\include{final/appendix}
-\include{final/glossary}
+% \include{final/appendix}
+% \include{final/glossary}
 
 \end{mainmatter}
 

@@ -1,4 +1,9 @@
+
+# Misc
+.DS_Store
 build
+
+# LaTeX
 *.aux
 *.bbl
 *.blg
@@ -6,4 +11,9 @@ build
 *.out
 *.pdf.tmp
 *.toc
-.DS_Store
+
+# Verilator
+obj_dir
+
+# Icarus
+*.vvp
