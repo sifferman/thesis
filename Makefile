@@ -1,10 +1,10 @@
 
 BUILD_DIR := $(CURDIR)/build
 
-PDFLATEX := TEXINPUTS=$(CURDIR):$(CURDIR)/src:${BUILD_DIR}/dependencies/ucsb/sty: \
-	pdflatex -interaction=nonstopmode -halt-on-error -output-directory ${BUILD_DIR}
+PDFLATEX := TEXINPUTS=$(CURDIR):$(CURDIR)/tex:${BUILD_DIR}/dependencies/ucsb/sty: \
+	pdflatex -interaction=nonstopmode -halt-on-error -shell-escape -output-directory ${BUILD_DIR}
 
-BIBTEX := BSTINPUTS=${BUILD_DIR}/dependencies/ucsb: BIBINPUTS=$(CURDIR)/src: \
+BIBTEX := BSTINPUTS=${BUILD_DIR}/dependencies/ucsb: BIBINPUTS=$(CURDIR)/tex: \
 	bibtex
 
 JUNK := *.pdf *.aux *.log *.bbl *.blg *.toc *.out *.fdb_latexmk *.fls *.synctex.gz
