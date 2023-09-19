@@ -3,7 +3,7 @@
 \pdfoutput=1
 
 %--- Packages ---------------------------------------------------------
-\usepackage[lofdepth,lotdepth,caption=false]{subfig}
+\usepackage[lotdepth,caption=false]{subfig}
 \usepackage{fancyhdr}
 \usepackage[hyphens]{url}
 % \usepackage{hyperref}
@@ -19,6 +19,7 @@
 \usepackage{siunitx}
 \usepackage{doi}
 \usepackage{placeins}
+\usepackage[all]{hypcap}
 
 %---New Definitions and Commands------------------------------------------------------
 \def\p{\partial}
@@ -44,6 +45,8 @@
 \renewcommand{\chapterautorefname}{Chapter}
 \renewcommand{\sectionautorefname}{Section}
 \renewcommand{\contentsname}{Table of Contents}
+\renewcommand{\bibname}{References}
+\newcommand{\subfigureautorefname}{Subfigure}
 
 %---Set Margins ------------------------------------------------------
 \setlength\oddsidemargin{0.25 in} \setlength\evensidemargin{0.25 in} \setlength\textwidth{6.25 in} \setlength\textheight{8.50 in}
@@ -62,10 +65,10 @@
 	\maketitle
 	\approvalpage
 	\copyrightpage
-	% \input{preliminary/vitae}
 	\input{preliminary/abstract}
 	\tableofcontents
   \addtocontents{toc}{\protect{\pdfbookmark[0]{\contentsname}{toc}}}
+  \listoffigures
 \end{frontmatter}
 
 \begin{mainmatter}
@@ -112,11 +115,9 @@
 
 %=== Final ============================================
 
-% \include{final/appendix}
-% \include{final/glossary}
-
 \end{mainmatter}
 
 \include{final/references}
+% \include{final/appendix}
 
 \end{document}
