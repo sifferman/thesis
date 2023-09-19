@@ -1,0 +1,39 @@
+name: Test Code Examples
+
+on: [push]
+
+jobs:
+  Verify-Solution:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Download FuseSoC
+        run: |
+          python -m pip install --upgrade pip
+          pip install fusesoc
+          fusesoc --version
+      - name: Install gcc-10
+        run: |
+          sudo apt update
+          sudo apt install -y build-essential
+          sudo apt install -y gcc-10 g++-10 cpp-10
+          sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 --slave /usr/bin/g++ g++ /usr/bin/g++-10 --slave /usr/bin/gcov gcov /usr/bin/gcov-10
+          gcc --version
+      - name: Download OSS
+        run: |
+          curl -JOL https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2023-05-23/oss-cad-suite-linux-x64-20230523.tgz
+          tar -xzvf oss-cad-suite-linux-x64-20230523.tgz -C ./
+          rm -rf oss-cad-suite-linux-x64-20230523.tgz
+          echo "$GITHUB_WORKSPACE/oss-cad-suite/bin" >> $GITHUB_PATH
+      - name: Test C-like
+        run: |
+          cd $GITHUB_WORKSPACE/code/c-like
+          make
+      - name: Test Cache Lab
+        run: |
+          cd $GITHUB_WORKSPACE/code/cache_lab
+          make
