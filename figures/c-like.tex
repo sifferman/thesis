@@ -1,0 +1,26 @@
+
+\begin{figure}[t]
+    \centering
+
+    \subfloat[
+        Using purely structural constructs to create MUXes can provide long and superfluous code.
+    ]{
+        \begin{minipage}{0.8\textwidth}
+            \footnotesize
+            \inputminted[frame=single]{systemverilog}{code/c-like/low.svh}
+        \end{minipage}
+    }
+
+    \subfloat[
+        Using C-like constructs such as a \mintinline{systemverilog}{function}, \mintinline{systemverilog}{if} statement, and \mintinline{systemverilog}{for} loop can provide much cleaner code.
+    ]{
+        \begin{minipage}{0.8\textwidth}
+            \footnotesize
+            \inputminted[frame=single]{systemverilog}{code/c-like/high.svh}
+        \end{minipage}
+    }
+
+    \caption{Comparison of purely structural Verilog versus C-like Verilog. To demonstrate this comparison, provided are two different implementations of the Find First Set operation.}
+    \label{fig:c-like}
+
+\end{figure}

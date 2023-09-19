@@ -1,0 +1,34 @@
+
+\begin{figure}[t]
+    \centering
+
+    \subfloat[
+        If any bits of \mintinline{systemverilog}{a} are set, then \mintinline{systemverilog}{out} is \mintinline{systemverilog}{1}.
+    ]{
+        \begin{minipage}{0.8\textwidth}
+            \inputminted[frame=single]{systemverilog}{code/opt.svh}
+        \end{minipage}
+    }
+
+    \subfloat[
+        Vivado infers the code as one parallel LUT.
+    ]{
+        \includegraphics[width=0.9\linewidth]{figures/opt/vivado.pdf}
+    }
+
+    \subfloat[
+        Yosys without optimizations enabled infers the code as a series of 2:1 MUXes.
+    ]{
+        \includegraphics[width=0.7\linewidth]{figures/opt/yosys_noopt.pdf}
+    }
+
+    \subfloat[
+        Yosys with optimizations enabled infers the code as one parallel OR gate.
+    ]{
+        \includegraphics[width=0.7\linewidth]{figures/opt/yosys_opt.pdf}
+    }
+
+    \caption{Comparison of differences in synthesis.}
+    \label{fig:opt}
+
+\end{figure}
