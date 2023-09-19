@@ -31,9 +31,9 @@ jobs:
           echo "$GITHUB_WORKSPACE/oss-cad-suite/bin" >> $GITHUB_PATH
       - name: Test C-like
         run: |
-          cd $GITHUB_WORKSPACE/code/c-like
+          cd $GITHUB_WORKSPACE/media/code/c-like
           make
       - name: Test Cache Lab
         run: |
-          cd $GITHUB_WORKSPACE/code/cache_lab
+          cd $GITHUB_WORKSPACE/media/code/cache_lab
           make
