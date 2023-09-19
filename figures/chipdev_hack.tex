@@ -1,7 +1,7 @@
 
 \begin{figure}[t]
     \centering
-    \frame{\includegraphics[width=0.9\linewidth]{figures/chipdev_hack.pdf}}
+    \frame{\includegraphics[width=0.9\linewidth]{media/chipdev_hack.pdf}}
     \caption{This example shows ChipDev \cite{ChipDev} incorrectly accepting this submission despite a potential mismatch between simulation and synthesis. For example, Verilator will override the \mintinline{systemverilog}{always_comb} with the \mintinline{systemverilog}{assign}, but Yosys will override the \mintinline{systemverilog}{assign} with the \mintinline{systemverilog}{always_comb}. This could be corrected if ChipDev chooses to incorporate a similar verification flow to what is outlined in \autoref{section:complex_tool_setups}.}
     \label{fig:chipdev_hack}
 \end{figure}
