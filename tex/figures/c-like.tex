@@ -8,6 +8,7 @@
         \begin{minipage}{0.8\textwidth}
             \footnotesize
             \inputminted[frame=single]{systemverilog}{media/code/c-like/low.svh}
+            \label{subfig:structural_only}
         \end{minipage}
     }
 
@@ -17,10 +18,15 @@
         \begin{minipage}{0.8\textwidth}
             \footnotesize
             \inputminted[frame=single]{systemverilog}{media/code/c-like/high.svh}
+            \label{subfig:c-like_allowed}
         \end{minipage}
     }
 
-    \caption{Comparison of purely structural Verilog versus C-like Verilog. To demonstrate this comparison, provided are two different implementations of the Find First Set operation.}
+    \caption[
+        Structural vs. C-like Verilog
+    ]{
+        Provided is an example of when C-like constructs can be used to write cleaner code compared to purely structural constructs. \autoref{subfig:structural_only} and \autoref{subfig:c-like_allowed} both implement the Find First Set operation.
+    }
     \label{fig:c-like}
 
 \end{figure}
