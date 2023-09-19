@@ -1,5 +1,20 @@
 # Thesis
 
+## Cite
+
+If you use this thesis in your research, please include the following citation:
+
+```bibtex
+@mastersthesis{SiffermanMastersThesis,
+  author = {Sifferman, Ethan},
+  title = {{A}dvancing {S}ynthesizable {V}erilog/{S}ystem{V}erilog {E}ducation with {O}pen-{S}ource {T}ools and {A}utograders},
+  school = {University of California, Santa Barbara},
+  month = {September},
+  year = {2023},
+  note = {\url{https://thesis.sifferman.dev/}},
+}
+```
+
 ## Build Instructions
 
 ```bash

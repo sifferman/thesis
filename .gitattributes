@@ -1,2 +1,15 @@
 
-dependencies/* linguist-vendored
+# EOL
+*                   text eol=lf
+dependencies/*      -text
+dependencies/**/*   -text
+media/graphics/*    -text
+media/graphics/**/* -text
+
+# Language Corrections
+*.vh                linguist-language=Verilog
+*.core              linguist-language=YAML
+
+# Vendored
+dependencies/*      linguist-vendored
+dependencies/**/*   linguist-vendored
