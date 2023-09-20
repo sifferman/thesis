@@ -3,7 +3,7 @@
     \centering
     \frame{\includegraphics[width=0.9\linewidth]{media/graphics/chipdev_hack.pdf}}
     \caption[
-        Breaking ChipDev's verification flow
+        Error in ChipDev's verification flow
     ]{
         This example shows ChipDev \cite{ChipDev} incorrectly accepting this submission despite a potential mismatch between simulation and synthesis. For example, Verilator will override the \mintinline{systemverilog}{always_comb} with the \mintinline{systemverilog}{assign}, but Yosys will override the \mintinline{systemverilog}{assign} with the \mintinline{systemverilog}{always_comb}. This could be corrected if ChipDev chooses in the future to incorporate a similar verification flow to what is outlined in \autoref{section:complex_tool_setups}.
     }
