@@ -1,67 +1,84 @@
 
 \begin{appendices}
 
+
+
 \chapter{Open-source Contributions}
 \label{appx:contributions}
 
-This appendix identifies several open-source issues and contributions I have made. Most of the contributions in this appendix were related to my efforts as an HDL educator.
+This appendix identifies several open-source issues and contributions I have made. Most of the contributions in this appendix are related to my efforts as an HDL educator.
 
-\section{My open-source issues and contributions}
+\section{Open-source issues and contributions created by me}
 
 \begin{itemize}
-    \item \url{https://github.com/olofk/fusesoc/pull/645} [\textbf{open-pr}] Improved inheritance elaboration
-    \item \url{https://github.com/verilator/verilator/pull/4409} [\textbf{closed-pr}] Add check for conflicting options e.g. --binary and --lint-only
-    \item \url{https://github.com/olofk/edalize/pull/389} [\textbf{open-pr}] Added support for additional Verilator modes
-    \item \url{https://github.com/Rain92/FPGA-Mandelbrot/pull/1} [\textbf{open-pr}] Fixed build issues
-    \item \url{https://github.com/lowRISC/style-guides/pull/66} [\textbf{closed-pr}] Specified that functions should avoid non-local references
-    \item \url{https://github.com/steveicarus/iverilog/pull/980} [\textbf{closed-pr}] Argumentless functions fix
-    \item \url{https://github.com/verilator/verilator/pull/4172} [\textbf{closed-pr}] Added NEWERSTD warning when using feature in newer language standard
-    \item \url{https://github.com/openhwgroup/cva6/pull/1142} [\textbf{closed-pr}] Improved Acronym List in Glossary
+    \item [\pullrequesticon] \githubpull{olofk/fusesoc}{645}: Improved inheritance elaboration
+    \item [\mergedicon] \githubpull{verilator/verilator}{4409}: Check for conflicting options e.g. --binary and --lint-only
+    \item [\pullrequesticon] \githubpull{olofk/edalize}{389}: Added support for additional Verilator modes
+    \item [\pullrequesticon] \githubpull{Rain92/FPGA-Mandelbrot}{1}: Fixed build issues
+    \item [\mergedicon] \githubpull{lowRISC/style-guides}{66}: Prohibit functions from using non-local references
+    \item [\mergedicon] \githubpull{steveicarus/iverilog}{980}: Argumentless functions fix
+    \item [\mergedicon] \githubpull{verilator/verilator}{4172}: Added NEWERSTD warning
+    \item [\mergedicon] \githubpull{openhwgroup/cva6}{1142}: Improved Acronym List in Glossary
 \end{itemize}
 
 \section{Open-source issues created by my students for my classes}
 
 \begin{itemize}
-    \item \url{https://github.com/YosysHQ/oss-cad-suite-build/issues/28} [\textbf{closed-issue}] nextpnr-gowin support requested
+    \item [\issueclosedicon] \githubissue{YosysHQ/oss-cad-suite-build}{28} nextpnr-gowin support requested
 \end{itemize}
+
+
 
 \chapter{Style Guide Survey}
 \label{appx:style_guides}
 
 This appendix identifies several prominent Verilog and SystemVerilog style guides.
 
-\section{Projects that use lowRISC SystemVerilog Coding Style}
+\section{lowRISC Verilog Coding Style Guide}
 
 \begin{itemize}
-    \item \url{https://github.com/openhwgroup/cva6}
-    \item \url{https://github.com/lowRISC/ibex}
-    \item \url{https://github.com/lowRISC/opentitan}
-    \item \url{https://github.com/openhwgroup/cv32e40p}
-    \item \url{https://github.com/openhwgroup/cvfpu}
-    \item \url{https://github.com/pulp-platform/ara}
+    \item \url{https://github.com/lowRISC/style-guides} \cite{lowRISCstyleguides}
+    \item Projects that use lowRISC Verilog Coding Style Guide:
+    \begin{itemize}
+        \item lowRISC: Ibex RISC-V Core \cite{Ibex}
+        \item lowRISC: OpenTitan RISC-V Core \cite{OpenTitan}
+        \item OpenHW Group: CV32E40P RISC-V Core \cite{cv32e40p}
+        \item OpenHW Group: CVA6 RISC-V Core \cite{cva6}
+        \item OpenHW Group: FPnew Floating-Point Unit \cite{cvfpu}
+        \item PULP Platform: Ara Vector Unit \cite{Ara}
+        \item PULP Platform: MemPool Many-Core System \cite{MemPool}
+    \end{itemize}
 \end{itemize}
 
-\section{Projects that use BSG SystemVerilog Coding Style}
+\pagebreak
+
+\section{BSG System Verilog Coding Standards}
 
 \begin{itemize}
-    \item \url{https://github.com/black-parrot/black-parrot}
-    \item \url{https://github.com/bespoke-silicon-group/basejump_stl}
+    \item \href{https://docs.google.com/document/d/1xA5XUzBtz_D6aSyIBQUwFk_kSUdckrfxa2uzGjMgmCU}{\footnotesize docs.google.com/document/d/1xA5XUzBtz\_D6aSyIBQUwFk\_kSUdckrfxa2uzGjMgmCU} \cite{BSGstyleguide}
+    \item Projects that use BSG System Verilog Coding Standards:
+    \begin{itemize}
+        \item Bespoke Silicon Group: BlackParrot RISC-V Core \cite{blackparrot}
+        \item Bespoke Silicon Group: BaseJump Standard Template Library \cite{basejumpstl}
+    \end{itemize}
 \end{itemize}
 
-\section{Misc Style Guides}
+\section{Company Style Guides}
 
 \begin{itemize}
-    \item \url{https://michaeltaylor.org/edu/papers/FreescaleVerilog.pdf}
-    \item \url{https://docs.xilinx.com/r/en-US/ug901-vivado-synthesis/HDL-Coding-Techniques}
-    \item \url{https://www.intel.com/content/www/us/en/docs/programmable/683082/23-1/recommended-hdl-coding-styles.html}
-    \item \url{https://www.latticesemi.com/~/media/LatticeSemi/Documents/UserManuals/EI/HDLcodingguidelines.PDF?document_id=48203}
+    \item Xilinx -- HDL Coding Techniques \cite{Xilinxstyleguide}
+    \item Intel -- Recommended HDL Coding Styles \cite{Intelstyleguide}
+    \item Lattice -- HDL Coding Guidelines \cite{Latticestyleguide}
+    \item Freescale -- Verilog HDL Coding \cite{Freescalestyleguide}
 \end{itemize}
 
-\section{Less-complete Style Guides}
+\section{Miscellaneous Style Guides}
 
 \begin{itemize}
-    \item \url{https://github.com/rsd-devel/rsd/wiki/en-devel-coding-convention}
-    \item \url{https://github.com/hughperkins/VeriGPU/blob/main/docs/coding_guidelines.md}
+    \item RSD RISC-V Core -- Coding conventions \cite{RSDstyleguide}
+    \item VeriGPU -- Coding guidelines \cite{VeriGPUstyleguide}
 \end{itemize}
+
+
 
 \end{appendices}
