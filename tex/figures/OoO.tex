@@ -1,11 +1,26 @@
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=0.9\linewidth]{media/graphics/labs_with_cva6/OoO.png}
+
+    \subfloat[
+        RISC-V assembly that demonstrates out-of-order execution.
+    ]{
+        \begin{minipage}{0.8\textwidth}
+            \inputminted[frame=single]{gas}{media/code/OoO.S}
+        \end{minipage}
+    }
+
+    \subfloat[
+        WaveForm screenshot. \emph{(Note: this figure omits redundant cycles to improve readability)}.
+    ]{
+        \includegraphics[width=0.9\linewidth]{media/graphics/labs_with_cva6/OoO.png}
+    }
+
     \caption[
         Out-of-Order Demonstration with CVA6
     ]{
-        Out-of-Order Demonstration with CVA6: FPU and LSU finish before MULT \cite{SiffermanLatchUp}. In the Out-of-Order lab, participants are asked to write an assembly program to demonstrate different data-hazards.
+        Out-of-Order Demonstration with CVA6: FPU and LSU finish before MULT \cite{SiffermanLatchUp}. In the Out-of-Order lab, participants are asked to write an assembly program to demonstrate code with and without different data-hazards.
     }
     \label{fig:OoO}
+
 \end{figure}
