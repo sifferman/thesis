@@ -1,6 +1,6 @@
 diff -Naur dependencies/ucsb/sty/ucthesis-CA2012.cls build/dependencies/ucsb/sty/ucthesis-CA2012.cls
 --- dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-09-19 13:18:37.076212700 -0700
-+++ build/dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-09-19 13:17:51.913885500 -0700
++++ build/dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-09-19 17:33:03.264495400 -0700
 @@ -206,12 +206,9 @@
      \bigskip \medskip \vspace{6ex}
      \fmfont {\bfseries \Large {\@title} \par}   % Formatting of the Dissertation title
@@ -16,7 +16,15 @@ diff -Naur dependencies/ucsb/sty/ucthesis-CA2012.cls build/dependencies/ucsb/sty
      \bigskip \medskip by \par
      \bigskip \medskip {\@author} \par
    \end{center}
-@@ -357,6 +354,7 @@
+@@ -338,6 +335,7 @@
+ \newenvironment{vitae}{
+   \if@openright\cleardoublepage \else\clearpage \fi
+   \ssp
++  \phantomsection
+   \begin{center}
+     {\large \bfseries \vitaename} \par
+     {\large \@author}
+@@ -357,6 +355,7 @@
  % \title and \author macros
  \def\abstract{
      \if@openright\cleardoublepage \else\clearpage \fi
