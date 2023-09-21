@@ -1,6 +1,6 @@
 diff -Naur dependencies/ucsb/sty/ucthesis-CA2012.cls build/dependencies/ucsb/sty/ucthesis-CA2012.cls
---- dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-09-19 13:18:37.076212700 -0700
-+++ build/dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-09-19 17:33:03.264495400 -0700
+--- dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-09-20 15:36:41.529422600 -0700
++++ build/dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-09-20 15:36:36.509912700 -0700
 @@ -206,12 +206,9 @@
      \bigskip \medskip \vspace{6ex}
      \fmfont {\bfseries \Large {\@title} \par}   % Formatting of the Dissertation title
@@ -16,6 +16,15 @@ diff -Naur dependencies/ucsb/sty/ucthesis-CA2012.cls build/dependencies/ucsb/sty
      \bigskip \medskip by \par
      \bigskip \medskip {\@author} \par
    \end{center}
+@@ -252,7 +249,7 @@
+   \thispagestyle{empty}
+   \null\vfill
+   \begin{center}
+-    {\fmfont The Dissertation of {\@author} is approved.} \\
++    {\fmfont The Thesis of {\@author} is approved.} \\
+
+     \vspace{.25in} \vspace{\@approvalspace}
+     $\:\overline{~~~~ \mbox{\rule{0in}{0.16in} \hspace{3.5in}}}\:$ \\
 @@ -338,6 +335,7 @@
  \newenvironment{vitae}{
    \if@openright\cleardoublepage \else\clearpage \fi
