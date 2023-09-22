@@ -1,6 +1,16 @@
-# Thesis
 
-## Cite
+# Advancing Synthesizable Verilog/SystemVerilog Education with Open-Source Tools and Autograders
+
+## About
+
+A thesis submitted in partial satisfaction of the requirements for the degree Master of Computer Engineering
+
+* Ethan Sifferman
+* September 2023
+* University of California, Santa Barbara
+* Department of Electrical and Computer Engineering
+
+### Cite
 
 If you use this thesis in your research, please include the following citation:
 
@@ -15,14 +25,22 @@ If you use this thesis in your research, please include the following citation:
 }
 ```
 
-## Build Instructions
+### Committee
+
+* UCSB Assistant Professor Jonathan Balkind, *chair*
+* UCSB Professor Dmitri Strukov
+* UCSB Professor Yogananda Isukapalli
+
+## Development
+
+### Build Instructions
 
 ```bash
 sudo apt install texlive texlive-full
 make
 ```
 
-## Patch Instructions
+### Patch Instructions
 
 Do not edit any files inside `"dependencies"` directly. Instead, all changes should be stored in `"dependencies.patch"`, which is applied during building. The following is how to update `"dependencies.patch"`.
 
