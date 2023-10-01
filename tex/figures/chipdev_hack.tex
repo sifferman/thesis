@@ -5,7 +5,9 @@
     \caption[
         Error in ChipDev's verification flow
     ]{
-        This example shows ChipDev \cite{ChipDev} incorrectly accepting this submission despite a potential mismatch between simulation and synthesis. For example, Verilator will override the \mintinline{SystemVerilog}{always_comb} with the \mintinline{SystemVerilog}{assign}, but Yosys will override the \mintinline{SystemVerilog}{assign} with the \mintinline{SystemVerilog}{always_comb}. This could be corrected if ChipDev chooses in the future to incorporate a similar verification flow to what is outlined in \autoref{section:complex_tool_setups}.
+        This example shows ChipDev \cite{ChipDev} incorrectly accepting this submission despite a potential mismatch between simulation and synthesis.
+        For example, Verilator will override the \mintinline{SystemVerilog}{always_comb} with the \mintinline{SystemVerilog}{assign}, but Yosys will override the \mintinline{SystemVerilog}{assign} with the \mintinline{SystemVerilog}{always_comb}.
+        This could be corrected if ChipDev chooses in the future to incorporate a similar verification flow to what is outlined in \autoref{section:complex_tool_setups}.
     }
     \label{fig:chipdev_hack}
 \end{figure}

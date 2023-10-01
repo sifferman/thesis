@@ -2,18 +2,40 @@
 \chapter{Teaching Code Scalability and Development Practices}
 \label{chapter:scalability}
 
-Aside from ensuring that student code follows best practices and correctly synthesizes, an equally important skill to teach students is how to efficiently work on large-scale projects. As the number of transistors on an integrated circuit has increased, the scale of Verilog designs has also drastically increased. At Intel, the SoC that my team was verifying had over 500 Verilog source files in the design. Similarly, one of the most popular RISC-V cores, CVA6, is written in nearly 17,000 lines of code \cite{cva6}. Ensuring seamless development and limiting the number of bugs within these colossal codebases requires strong project management skills. This is achieved by automatic regression, consistent coding styles, and employing version control. For advanced Verilog courses such as Computer Architecture or SoC design, I argue that teaching code scalability is often just as important as teaching microarchitecture implementation methods.
+Aside from ensuring that student code follows best practices and correctly synthesizes, an equally important skill to teach students is how to efficiently work on large-scale projects.
+As the number of transistors on an integrated circuit has increased, the scale of Verilog designs has also drastically increased.
+At Intel, the SoC that my team was verifying had over 500 Verilog source files in the design.
+Similarly, one of the most popular RISC-V cores, CVA6, is written in nearly 17,000 lines of code \cite{cva6}.
+Ensuring seamless development and limiting the number of bugs within these colossal codebases requires strong project management skills.
+This is achieved by automatic regression, consistent coding styles, and employing version control.
+For advanced Verilog courses such as Computer Architecture or SoC design, I argue that teaching code scalability is often just as important as teaching microarchitecture implementation methods.
 
 \section{SystemVerilog offers many features to aid in code organization.}
 
 \input{figures/ece152a_pkg}
 
-Features such as packages, structs, and parameters are incredibly popular in large-scale SystemVerilog projects. And although IEEE 1364 Verilog does not support packages and structs, many RTL designers have found workarounds with \mintinline{SystemVerilog}{`include} files and functions. \cite{lowRISCstyleguides, zachjssv2vGitHub} These features may not be \emph{required} to implement hardware algorithms such as instruction decoding and serial interfaces, but are still extremely prevalent in well-organized, large-scale Verilog designs. In ECE 152A, ECE 154A, and ECE 154B, we were sure to teach students to apply these code organization strategies (see \autoref{fig:ece152a_pkg}).
+Features such as packages, structs, and parameters are incredibly popular in large-scale SystemVerilog projects.
+And although IEEE 1364 Verilog does not support packages and structs, many RTL designers have found workarounds with \mintinline{SystemVerilog}{`include} files and functions.
+\cite{lowRISCstyleguides, zachjssv2vGitHub} These features may not be \emph{required} to implement hardware algorithms such as instruction decoding and serial interfaces, but are still extremely prevalent in well-organized, large-scale Verilog designs.
+In ECE 152A, ECE 154A, and ECE 154B, we were sure to teach students to apply these code organization strategies (see \autoref{fig:ece152a_pkg}).
 
 \section{Version control should be used in Verilog designs.}
 
-Aside from code structure, a cornerstone of modern software development is version control. Intel, numerous other companies, and most RISC-V projects extensively rely on Git and GitHub for version management (see \autoref{appx:contributions} and \autoref{appx:style_guides}). Moreover, Git submodules and subtrees provide an elegant and popular solution for integrating IP blocks into designs seamlessly, enhancing reusability and collaboration. Plus, allowing students to post code they have written themselves to GitHub is a great way to aid them in creating an online portfolio for themselves. In ECE 154B, students practiced using Git and GitHub to explore open-source projects, collaborate with peers, add open-source cores as submodules, and more. While software might not be the core focus for some students, being able to work with it efficiently and professionally is still extremely valuable. Because of the invaluable aid Git offers in code quality, and its extreme prevalence in all software development, it is an essential hard-skill for all engineers.
+Aside from code structure, a cornerstone of modern software development is version control.
+Intel, numerous other companies, and most RISC-V projects extensively rely on Git and GitHub for version management (see \autoref{appx:contributions} and \autoref{appx:style_guides}).
+Moreover, Git submodules and subtrees provide an elegant and popular solution for integrating IP blocks into designs seamlessly, enhancing reusability and collaboration.
+Plus, allowing students to post code they have written themselves to GitHub is a great way to aid them in creating an online portfolio for themselves.
+In ECE 154B, students practiced using Git and GitHub to explore open-source projects, collaborate with peers, add open-source cores as submodules, and more.
+While software might not be the core focus for some students, being able to work with it efficiently and professionally is still extremely valuable.
+Because of the invaluable aid Git offers in code quality, and its extreme prevalence in all software development, it is an essential hard-skill for all engineers.
 
 \section{SystemVerilog assertions and in-module verification are important.}
 
-The final design strategy for promoting code scalability is to promote in-module verification. Waveform viewers are incredibly powerful and useful tools, but work best when supplemented with \mintinline{SystemVerilog}{$display} statements that have already identified where and when a simulation error occurred. Most SystemVerilog in industry designs is full of self-verifying modules by use of SystemVerilog assertions (SVA) and Universal Verification Methodology (UVM). Note that as of 9/10/23, since there is poor SVA and UVM support in open-source tools, projects may need to use \mintinline{SystemVerilog}{`ifdef} macros to disable UVM and SVA calls on a per-tool basis, may need to limit themselves to the subset of supported features, or may need to resort to a basic \mintinline{SystemVerilog}{always} blocks instead. Verilator has limited support for UVM and SVA, but is getting closer to full support every day \cite{VerilatorUVM, BieganskiORConf, VerilatorSVA}. But no matter the specific implementation, in-module verification is a valuable design practice to teach students. In ECE 152A, ECE 154A, and ECE 154B, students were often required to design modules that incorporated simulation-only logic to test basic functionality. By adopting these universal standards, Verilog education becomes better aligned with real-world methodologies for enhanced scalability and proficiency.
+The final design strategy for promoting code scalability is to promote in-module verification.
+Waveform viewers are incredibly powerful and useful tools, but work best when supplemented with \mintinline{SystemVerilog}{$display} statements that have already identified where and when a simulation error occurred.
+Most SystemVerilog in industry designs is full of self-verifying modules by use of SystemVerilog assertions (SVA) and Universal Verification Methodology (UVM).
+Note that as of 9/10/23, since there is poor SVA and UVM support in open-source tools, projects may need to use \mintinline{SystemVerilog}{`ifdef} macros to disable UVM and SVA calls on a per-tool basis, may need to limit themselves to the subset of supported features, or may need to resort to a basic \mintinline{SystemVerilog}{always} blocks instead.
+Verilator has limited support for UVM and SVA, but is getting closer to full support every day \cite{VerilatorUVM, BieganskiORConf, VerilatorSVA}.
+But no matter the specific implementation, in-module verification is a valuable design practice to teach students.
+In ECE 152A, ECE 154A, and ECE 154B, students were often required to design modules that incorporated simulation-only logic to test basic functionality.
+By adopting these universal standards, Verilog education becomes better aligned with real-world methodologies for enhanced scalability and proficiency.
