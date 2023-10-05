@@ -1,31 +1,29 @@
 diff -Naur dependencies/ucsb/sty/ucthesis-CA2012.cls build/dependencies/ucsb/sty/ucthesis-CA2012.cls
---- dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-09-20 15:36:41.529422600 -0700
-+++ build/dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-09-20 15:36:36.509912700 -0700
-@@ -206,12 +206,9 @@
+--- dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-10-01 05:04:54.151205100 -0700
++++ build/dependencies/ucsb/sty/ucthesis-CA2012.cls	2023-10-05 14:00:39.516043800 -0700
+@@ -206,10 +206,9 @@
      \bigskip \medskip \vspace{6ex}
      \fmfont {\bfseries \Large {\@title} \par}   % Formatting of the Dissertation title
      \bigskip \medskip \vspace{6ex}
 -    A dissertation submitted in partial satisfaction  \par
-+    A thesis submitted in partial satisfaction of the \par
++    A {\@report} submitted in partial satisfaction of the \par
      \smallskip
 -    of the requirements for the degree \par
 -    \bigskip {\@degree} \par
--    \smallskip in \par
--    \smallskip {\@field} \par
 +    requirements for the degree {\@degree} \par
+     \smallskip in \par
+     \smallskip {\@field} \par
      \bigskip \medskip by \par
-     \bigskip \medskip {\@author} \par
-   \end{center}
-@@ -252,7 +249,7 @@
+@@ -252,7 +251,7 @@
    \thispagestyle{empty}
    \null\vfill
    \begin{center}
 -    {\fmfont The Dissertation of {\@author} is approved.} \\
-+    {\fmfont The Thesis of {\@author} is approved.} \\
++    {\fmfont The {\@report} of {\@author} is approved.} \\
 
      \vspace{.25in} \vspace{\@approvalspace}
      $\:\overline{~~~~ \mbox{\rule{0in}{0.16in} \hspace{3.5in}}}\:$ \\
-@@ -338,6 +335,7 @@
+@@ -338,6 +337,7 @@
  \newenvironment{vitae}{
    \if@openright\cleardoublepage \else\clearpage \fi
    \ssp
@@ -33,7 +31,7 @@ diff -Naur dependencies/ucsb/sty/ucthesis-CA2012.cls build/dependencies/ucsb/sty
    \begin{center}
      {\large \bfseries \vitaename} \par
      {\large \@author}
-@@ -357,6 +355,7 @@
+@@ -357,6 +357,7 @@
  % \title and \author macros
  \def\abstract{
      \if@openright\cleardoublepage \else\clearpage \fi
