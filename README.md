@@ -3,7 +3,7 @@
 
 ## About
 
-A thesis submitted in partial satisfaction of the requirements for the degree Master of Computer Engineering
+A Thesis submitted in partial satisfaction of the requirements for the degree Master of Science in Electrical and Computer Engineering
 
 * Ethan Sifferman
 * September 2023
@@ -27,9 +27,9 @@ If you use this thesis in your research, please include the following citation:
 
 ### Committee
 
-* UCSB Assistant Professor Jonathan Balkind, *chair*
+* UCSB Professor Jonathan Balkind, *chair*
 * UCSB Professor Dmitri Strukov
-* UCSB Professor Yogananda Isukapalli
+* UCSB Lecturer Yogananda Isukapalli
 
 ## Development
 
