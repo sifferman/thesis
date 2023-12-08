@@ -56,7 +56,7 @@ Much like electrical engineers need some familiarity with transistor-level gate 
 
 To promote uniformity among tools, IEEE standardized synthesis of Verilog 1364 features under the label \enquote{1364.1}.
 However, there has been no official \enquote{1800.1} SystemVerilog synthesis standard to discuss the many new features that were added with SystemVerilog.
-Many SystemVerilog IEEE 1800 features are not consistently synthesizable by popular synthesis tools, such as classes, interfaces, and dynamic arrays \cite{1800-2017, sutherland}.
+Many SystemVerilog IEEE 1800 features are not consistently synthesizable by popular synthesis tools, such as classes, interfaces, and dynamic arrays \cite{1800-2017, sutherland, sutherland:book}.
 This may result from a SystemVerilog feature being subjectively similar to a prohibited feature in the IEEE 1364.1 standard, or may be due to insufficient tool development time.
 For these reasons, support for many features is inconsistent across different open-source tools \cite{svtests}, and \autoref{fig:dc_vs_synplify} shows Synopsys' own tools have inconsistencies across each-other.
 Since there is no official synthesis standard, style guides and linters have filled the role of unofficial documentation of SystemVerilog's synthesizable features to help engineers navigate the inconsistencies across different tools.
